@@ -1,0 +1,13 @@
+version: '3'
+ 
+services:
+    server:
+        image: obiba/plink:latest     
+        hostname: server
+        ports:
+            - "2222:22"
+        environment:
+                - MASTER_USER=${SSH_MASTER_USER}
+                - MASTER_PASS=${SSH_MASTER_PASS}
+        volumes:
+            - ./data:/home/master
