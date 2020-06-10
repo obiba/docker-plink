@@ -11,6 +11,9 @@ build:
 up:
 	sudo docker-compose up -d
 
+stop:
+	sudo docker-compose stop
+
 container-ip:
 	sudo docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' docker-plink_server_1
 
